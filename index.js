@@ -13,5 +13,3 @@ const redirectToRandomRepo = async () => {
 	const repos = await fetchRepos();
 	window.location.replace(pick(repos).html_url);
 };
-
-redirectToRandomRepo();

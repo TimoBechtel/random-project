@@ -6,5 +6,28 @@
 		<title>Find a random project</title>
 		<script src="./index.js"></script>
 	</head>
-	<body></body>
+	<body>
+		<style>
+			body {
+				font-family: monospace;
+			}
+			h1 {
+				text-align: center;
+				margin-top: 20%;
+			}
+		</style>
+		<h1>
+			Selecting a project
+			<br />
+			<span id="loading"></span>
+		</h1>
+		<script>
+			setTimeout(() => {
+				redirectToRandomRepo();
+			}, 300);
+			setInterval(() => {
+				document.getElementById('loading').innerHTML += '.';
+			}, 400);
+		</script>
+	</body>
 </html>
