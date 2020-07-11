@@ -10,10 +10,25 @@
 		<style>
 			body {
 				font-family: monospace;
+				background: black;
+				color: aquamarine;
 			}
 			h1 {
 				text-align: center;
 				margin-top: 20%;
+				animation: glitch 2s linear infinite;
+			}
+
+			@keyframes glitch {
+				39% {
+					transform: translate(0, 0);
+				}
+				40% {
+					transform: translate(-3px, 2px);
+				}
+				41% {
+					transform: translate(0, 0);
+				}
 			}
 		</style>
 		<h1>
@@ -24,7 +39,7 @@
 		<script>
 			setTimeout(() => {
 				redirectToRandomRepo();
-			}, 300);
+			}, 1500);
 			setInterval(() => {
 				document.getElementById('loading').innerHTML += '.';
 			}, 400);
